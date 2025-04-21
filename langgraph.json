@@ -1,0 +1,12 @@
+{
+  "entrypoint": "graph:chat_graph",          // ← module:path.to.object
+  "dependencies": ["fastapi", "langchain>=0.1.17"],
+  "host": "0.0.0.0",
+  "port": 8080,
+  "routes": {
+    "/chat": {
+      "method": "POST",
+      "graph": "chat_graph"
+    }
+  }
+}
